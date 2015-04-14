@@ -3,7 +3,10 @@ Audits AWS instances for unused reserved instances, or instances without corresp
 
 Requires that AWS EC2 tools exist and are configured.  http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
 
-Sample output:
+## Configuration
+Aside from setting up the AWS EC2 tools, you may also modify the list in "used_types" to reflect only the instance types you care about.
+
+## Sample output:
 ```
 ~# audit-aws-instances
 OK - m3.medium
