@@ -6,7 +6,7 @@ Requires that AWS EC2 tools exist and are configured.  http://docs.aws.amazon.co
 ## Configuration
 Aside from setting up the AWS EC2 tools, you may also modify the list in "used_types" to reflect only the instance types you care about.
 
-## Sample output:
+## Sample output
 ```
 ~# audit-aws-instances
 OK - m3.medium
