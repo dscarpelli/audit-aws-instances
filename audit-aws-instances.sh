@@ -22,9 +22,10 @@ for type in $used_types; do
   done < <(echo "$active_res" | grep "$type")
   ins_total=$(echo "$active_ins" | grep -c "$type")
   diff=$(($res_total - $ins_total))
-  if [[ $diff > 0 ]]; then
+  if [[ $diff -gt 0 ]]; then
     echo "UNUSED RESERVATION: (${diff}) - $type"
-  elif [[ $diff < 0 ]]; then
+  elif [[ $diff -lt 0 ]]; then
+    diff=$(echo $diff | sed 's/-//g')
     echo "UNRESERVED INSTANCES: (${diff}) - $type"
   else
     echo "OK - $type"
