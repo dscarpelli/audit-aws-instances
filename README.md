@@ -4,7 +4,7 @@ Audits AWS instances for unused reserved instances, or instances without corresp
 Requires that AWS EC2 tools exist and are configured.  http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
 
 ## Configuration
-Aside from setting up the AWS EC2 tools, you may also modify the list in "used_types" to reflect only the instance types you care about.
+Install and configure the AWS CLI and give the IAM user the necessary permissions to check reservations.  This script happens to source AWS API info from ~/.profile, but just make sure "aws cli" runs without errors, and the script should work.  The "used_types" list should be modified to reflect only the instance types you care about.
 
 ## Sample output
 ```
