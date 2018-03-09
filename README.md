@@ -1,5 +1,5 @@
 # audit-aws-instances
-Audits AWS instances for unused reserved instances, or instances without corresponding reserved instances.  Designed for use as a sensu/nagios plugin, so no output is good.  Returns exit code 1 (warn) if there are any outstanding RIs or unreserved instance.  Returns exit code 2 (crit) if there are >$crit outstanding for any instance type.
+Audits AWS instances for unused reserved instances, or instances without corresponding reserved instances.  Designed for use as a sensu/nagios plugin, so no output is good.  Returns exit code 1 (warn) if there are any outstanding RIs or unreserved instances.  Returns exit code 2 (crit) if there are >$crit outstanding for any instance type.
 
 ## Configuration
 Install and configure the AWS CLI and give the IAM user the necessary permissions to check reservations.
